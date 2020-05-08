@@ -65,6 +65,14 @@ public class Test {
     }
 
 
+
+    public static void f(){
+        int[] arr = {1,9,8,6,7,4,10,5,2};
+        arr = quickSort(arr,0,0);
+        System.out.println(CollectionUtils.arrayToList(arr));
+
+    }
+
     //二分法
     public static int search(int[] array,int target){
         int start = 0;
@@ -141,6 +149,39 @@ public class Test {
 
 
 
+    public static int[] quickSort(int[] arr,int start,int end){
+        int s = start;
+        int e = end;
+
+        int pivot = arr[(start+end)/2];
+
+        while (s<=e){
+
+            while (pivot > arr[s]){
+                s++;
+            }
+
+            while (pivot < arr[e]){
+                e--;
+            }
+
+            if (s<=e){
+                swap(arr,s,e);
+                s++;
+                e--;
+            }
+
+            
+
+        }
+
+
+
+        return arr;
+    }
+
+
+
 
 
 
@@ -148,7 +189,7 @@ public class Test {
     public static void main(String[] args){
 
 
-        e();
+        f();
 
     }
 }
