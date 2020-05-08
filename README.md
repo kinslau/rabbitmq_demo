@@ -1,1 +1,1 @@
-"# rabbitmq_demo" 
+基于本地消息的最终一致性demo
